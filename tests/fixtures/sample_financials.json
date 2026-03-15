@@ -1,0 +1,648 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-03-15T02:08:07.519049+00:00",
+  "input_hash": "",
+  "time_horizon_years": 3,
+  "scenarios": {
+    "pessimistic": {
+      "multipliers": {
+        "revenue_growth_factor": 0.6,
+        "cost_factor": 1.1
+      },
+      "pl": [
+        {
+          "year": 1,
+          "revenue_total": 120000,
+          "cogs": 26400.0,
+          "gross_profit": 93600.0,
+          "gross_margin_pct": 78.0,
+          "rd": 46200.0,
+          "sales_marketing": 39600.0,
+          "general_admin": 13200.0,
+          "total_opex": 99000.0,
+          "ebitda": -5400.0,
+          "depreciation": 3000.0,
+          "ebit": -8400.0,
+          "interest_expense": 0.0,
+          "ebt": -8400.0,
+          "ires": 0,
+          "irap": 0,
+          "tax_credits": {
+            "patent_box": 12889.8,
+            "credito_rs": 8400.0,
+            "innovazione_40": 6300.0
+          },
+          "net_income": 19189.8
+        },
+        {
+          "year": 2,
+          "revenue_total": 192000.0,
+          "cogs": 42240.0,
+          "gross_profit": 149760.0,
+          "gross_margin_pct": 78.0,
+          "rd": 73920.0,
+          "sales_marketing": 63360.0,
+          "general_admin": 21120.0,
+          "total_opex": 158400.0,
+          "ebitda": -8640.0,
+          "depreciation": 6000.0,
+          "ebit": -14640.0,
+          "interest_expense": 0.0,
+          "ebt": -14640.0,
+          "ires": 0,
+          "irap": 0,
+          "tax_credits": {
+            "patent_box": 12889.8,
+            "credito_rs": 8400.0,
+            "innovazione_40": 6300.0
+          },
+          "net_income": 12949.8
+        },
+        {
+          "year": 3,
+          "revenue_total": 307200.0,
+          "cogs": 67584.0,
+          "gross_profit": 239616.0,
+          "gross_margin_pct": 78.0,
+          "rd": 118272.0,
+          "sales_marketing": 101376.0,
+          "general_admin": 33792.0,
+          "total_opex": 253440.0,
+          "ebitda": -13824.0,
+          "depreciation": 9000.0,
+          "ebit": -22824.0,
+          "interest_expense": 0.0,
+          "ebt": -22824.0,
+          "ires": 0,
+          "irap": 0,
+          "tax_credits": {
+            "patent_box": 12889.8,
+            "credito_rs": 8400.0,
+            "innovazione_40": 6300.0
+          },
+          "net_income": 4765.8
+        }
+      ],
+      "cash_flow": [
+        {
+          "year": 1,
+          "net_income": 19189.8,
+          "depreciation": 3000.0,
+          "delta_receivables": -14794.52,
+          "delta_inventory": -0.0,
+          "delta_payables": 2169.86,
+          "cfo": 9565.14,
+          "capex": -15000,
+          "fcf": -5434.86,
+          "financing_received": 500000,
+          "debt_repayment": 0.0,
+          "net_cash_change": 494565.14,
+          "opening_cash": 10000.0,
+          "closing_cash": 504565.14
+        },
+        {
+          "year": 2,
+          "net_income": 12949.8,
+          "depreciation": 6000.0,
+          "delta_receivables": -8876.71,
+          "delta_inventory": -0.0,
+          "delta_payables": 1301.92,
+          "cfo": 11375.01,
+          "capex": -15000,
+          "fcf": -3624.99,
+          "financing_received": 0.0,
+          "debt_repayment": 0.0,
+          "net_cash_change": -3624.99,
+          "opening_cash": 504565.14,
+          "closing_cash": 500940.15
+        },
+        {
+          "year": 3,
+          "net_income": 4765.8,
+          "depreciation": 9000.0,
+          "delta_receivables": -14202.74,
+          "delta_inventory": -0.0,
+          "delta_payables": 2083.07,
+          "cfo": 1646.13,
+          "capex": -15000,
+          "fcf": -13353.87,
+          "financing_received": 0.0,
+          "debt_repayment": 0.0,
+          "net_cash_change": -13353.87,
+          "opening_cash": 500940.15,
+          "closing_cash": 487586.28
+        }
+      ],
+      "balance_sheet": [
+        {
+          "year": 1,
+          "assets": {
+            "fixed_assets_net": 12000.0,
+            "receivables": 14794.52,
+            "inventory": 0.0,
+            "cash": 504565.14,
+            "total": 531359.66
+          },
+          "liabilities": {
+            "equity": 500000,
+            "retained_earnings": 29189.8,
+            "long_term_debt": 0.0,
+            "payables": 2169.86,
+            "total": 531359.66
+          }
+        },
+        {
+          "year": 2,
+          "assets": {
+            "fixed_assets_net": 21000.0,
+            "receivables": 23671.23,
+            "inventory": 0.0,
+            "cash": 500940.15,
+            "total": 545611.38
+          },
+          "liabilities": {
+            "equity": 500000,
+            "retained_earnings": 42139.6,
+            "long_term_debt": 0.0,
+            "payables": 3471.78,
+            "total": 545611.38
+          }
+        },
+        {
+          "year": 3,
+          "assets": {
+            "fixed_assets_net": 27000.0,
+            "receivables": 37873.97,
+            "inventory": 0.0,
+            "cash": 487586.28,
+            "total": 552460.25
+          },
+          "liabilities": {
+            "equity": 500000,
+            "retained_earnings": 46905.4,
+            "long_term_debt": 0.0,
+            "payables": 5554.85,
+            "total": 552460.25
+          }
+        }
+      ]
+    },
+    "base": {
+      "multipliers": {
+        "revenue_growth_factor": 1.0,
+        "cost_factor": 1.0
+      },
+      "pl": [
+        {
+          "year": 1,
+          "revenue_total": 120000,
+          "cogs": 26400.0,
+          "gross_profit": 93600.0,
+          "gross_margin_pct": 78.0,
+          "rd": 42000.0,
+          "sales_marketing": 36000.0,
+          "general_admin": 12000.0,
+          "total_opex": 90000.0,
+          "ebitda": 3600.0,
+          "depreciation": 3000.0,
+          "ebit": 600.0,
+          "interest_expense": 0.0,
+          "ebt": 600.0,
+          "ires": 144.0,
+          "irap": 23.4,
+          "tax_credits": {
+            "patent_box": 12889.8,
+            "credito_rs": 8400.0,
+            "innovazione_40": 6300.0
+          },
+          "net_income": 28022.4
+        },
+        {
+          "year": 2,
+          "revenue_total": 240000.0,
+          "cogs": 52800.0,
+          "gross_profit": 187200.0,
+          "gross_margin_pct": 78.0,
+          "rd": 84000.0,
+          "sales_marketing": 72000.0,
+          "general_admin": 24000.0,
+          "total_opex": 180000.0,
+          "ebitda": 7200.0,
+          "depreciation": 6000.0,
+          "ebit": 1200.0,
+          "interest_expense": 0.0,
+          "ebt": 1200.0,
+          "ires": 288.0,
+          "irap": 46.8,
+          "tax_credits": {
+            "patent_box": 12889.8,
+            "credito_rs": 8400.0,
+            "innovazione_40": 6300.0
+          },
+          "net_income": 28455.0
+        },
+        {
+          "year": 3,
+          "revenue_total": 480000.0,
+          "cogs": 105600.0,
+          "gross_profit": 374400.0,
+          "gross_margin_pct": 78.0,
+          "rd": 168000.0,
+          "sales_marketing": 144000.0,
+          "general_admin": 48000.0,
+          "total_opex": 360000.0,
+          "ebitda": 14400.0,
+          "depreciation": 9000.0,
+          "ebit": 5400.0,
+          "interest_expense": 0.0,
+          "ebt": 5400.0,
+          "ires": 1296.0,
+          "irap": 210.6,
+          "tax_credits": {
+            "patent_box": 12889.8,
+            "credito_rs": 8400.0,
+            "innovazione_40": 6300.0
+          },
+          "net_income": 31483.2
+        }
+      ],
+      "cash_flow": [
+        {
+          "year": 1,
+          "net_income": 28022.4,
+          "depreciation": 3000.0,
+          "delta_receivables": -14794.52,
+          "delta_inventory": -0.0,
+          "delta_payables": 2169.86,
+          "cfo": 18397.74,
+          "capex": -15000,
+          "fcf": 3397.74,
+          "financing_received": 500000,
+          "debt_repayment": 0.0,
+          "net_cash_change": 503397.74,
+          "opening_cash": 10000.0,
+          "closing_cash": 513397.74
+        },
+        {
+          "year": 2,
+          "net_income": 28455.0,
+          "depreciation": 6000.0,
+          "delta_receivables": -14794.52,
+          "delta_inventory": -0.0,
+          "delta_payables": 2169.87,
+          "cfo": 21830.35,
+          "capex": -15000,
+          "fcf": 6830.35,
+          "financing_received": 0.0,
+          "debt_repayment": 0.0,
+          "net_cash_change": 6830.35,
+          "opening_cash": 513397.74,
+          "closing_cash": 520228.09
+        },
+        {
+          "year": 3,
+          "net_income": 31483.2,
+          "depreciation": 9000.0,
+          "delta_receivables": -29589.04,
+          "delta_inventory": -0.0,
+          "delta_payables": 4339.72,
+          "cfo": 15233.88,
+          "capex": -15000,
+          "fcf": 233.88,
+          "financing_received": 0.0,
+          "debt_repayment": 0.0,
+          "net_cash_change": 233.88,
+          "opening_cash": 520228.09,
+          "closing_cash": 520461.97
+        }
+      ],
+      "balance_sheet": [
+        {
+          "year": 1,
+          "assets": {
+            "fixed_assets_net": 12000.0,
+            "receivables": 14794.52,
+            "inventory": 0.0,
+            "cash": 513397.74,
+            "total": 540192.26
+          },
+          "liabilities": {
+            "equity": 500000,
+            "retained_earnings": 38022.4,
+            "long_term_debt": 0.0,
+            "payables": 2169.86,
+            "total": 540192.26
+          }
+        },
+        {
+          "year": 2,
+          "assets": {
+            "fixed_assets_net": 21000.0,
+            "receivables": 29589.04,
+            "inventory": 0.0,
+            "cash": 520228.09,
+            "total": 570817.13
+          },
+          "liabilities": {
+            "equity": 500000,
+            "retained_earnings": 66477.4,
+            "long_term_debt": 0.0,
+            "payables": 4339.73,
+            "total": 570817.13
+          }
+        },
+        {
+          "year": 3,
+          "assets": {
+            "fixed_assets_net": 27000.0,
+            "receivables": 59178.08,
+            "inventory": 0.0,
+            "cash": 520461.97,
+            "total": 606640.05
+          },
+          "liabilities": {
+            "equity": 500000,
+            "retained_earnings": 97960.6,
+            "long_term_debt": 0.0,
+            "payables": 8679.45,
+            "total": 606640.05
+          }
+        }
+      ]
+    },
+    "optimistic": {
+      "multipliers": {
+        "revenue_growth_factor": 1.4,
+        "cost_factor": 0.95
+      },
+      "pl": [
+        {
+          "year": 1,
+          "revenue_total": 120000,
+          "cogs": 26400.0,
+          "gross_profit": 93600.0,
+          "gross_margin_pct": 78.0,
+          "rd": 39900.0,
+          "sales_marketing": 34200.0,
+          "general_admin": 11400.0,
+          "total_opex": 85500.0,
+          "ebitda": 8100.0,
+          "depreciation": 3000.0,
+          "ebit": 5100.0,
+          "interest_expense": 0.0,
+          "ebt": 5100.0,
+          "ires": 1224.0,
+          "irap": 198.9,
+          "tax_credits": {
+            "patent_box": 12889.8,
+            "credito_rs": 8400.0,
+            "innovazione_40": 6300.0
+          },
+          "net_income": 31266.9
+        },
+        {
+          "year": 2,
+          "revenue_total": 288000.0,
+          "cogs": 63360.0,
+          "gross_profit": 224640.0,
+          "gross_margin_pct": 78.0,
+          "rd": 95760.0,
+          "sales_marketing": 82080.0,
+          "general_admin": 27360.0,
+          "total_opex": 205200.0,
+          "ebitda": 19440.0,
+          "depreciation": 6000.0,
+          "ebit": 13440.0,
+          "interest_expense": 0.0,
+          "ebt": 13440.0,
+          "ires": 3225.6,
+          "irap": 524.16,
+          "tax_credits": {
+            "patent_box": 12889.8,
+            "credito_rs": 8400.0,
+            "innovazione_40": 6300.0
+          },
+          "net_income": 37280.04
+        },
+        {
+          "year": 3,
+          "revenue_total": 691200.0,
+          "cogs": 152064.0,
+          "gross_profit": 539136.0,
+          "gross_margin_pct": 78.0,
+          "rd": 229824.0,
+          "sales_marketing": 196992.0,
+          "general_admin": 65664.0,
+          "total_opex": 492480.0,
+          "ebitda": 46656.0,
+          "depreciation": 9000.0,
+          "ebit": 37656.0,
+          "interest_expense": 0.0,
+          "ebt": 37656.0,
+          "ires": 9037.44,
+          "irap": 1468.58,
+          "tax_credits": {
+            "patent_box": 12889.8,
+            "credito_rs": 8400.0,
+            "innovazione_40": 6300.0
+          },
+          "net_income": 54739.78
+        }
+      ],
+      "cash_flow": [
+        {
+          "year": 1,
+          "net_income": 31266.9,
+          "depreciation": 3000.0,
+          "delta_receivables": -14794.52,
+          "delta_inventory": -0.0,
+          "delta_payables": 2169.86,
+          "cfo": 21642.24,
+          "capex": -15000,
+          "fcf": 6642.24,
+          "financing_received": 500000,
+          "debt_repayment": 0.0,
+          "net_cash_change": 506642.24,
+          "opening_cash": 10000.0,
+          "closing_cash": 516642.24
+        },
+        {
+          "year": 2,
+          "net_income": 37280.04,
+          "depreciation": 6000.0,
+          "delta_receivables": -20712.33,
+          "delta_inventory": -0.0,
+          "delta_payables": 3037.81,
+          "cfo": 25605.52,
+          "capex": -15000,
+          "fcf": 10605.52,
+          "financing_received": 0.0,
+          "debt_repayment": 0.0,
+          "net_cash_change": 10605.52,
+          "opening_cash": 516642.24,
+          "closing_cash": 527247.76
+        },
+        {
+          "year": 3,
+          "net_income": 54739.78,
+          "depreciation": 9000.0,
+          "delta_receivables": -49709.59,
+          "delta_inventory": -0.0,
+          "delta_payables": 7290.74,
+          "cfo": 21320.93,
+          "capex": -15000,
+          "fcf": 6320.93,
+          "financing_received": 0.0,
+          "debt_repayment": 0.0,
+          "net_cash_change": 6320.93,
+          "opening_cash": 527247.76,
+          "closing_cash": 533568.69
+        }
+      ],
+      "balance_sheet": [
+        {
+          "year": 1,
+          "assets": {
+            "fixed_assets_net": 12000.0,
+            "receivables": 14794.52,
+            "inventory": 0.0,
+            "cash": 516642.24,
+            "total": 543436.76
+          },
+          "liabilities": {
+            "equity": 500000,
+            "retained_earnings": 41266.9,
+            "long_term_debt": 0.0,
+            "payables": 2169.86,
+            "total": 543436.76
+          }
+        },
+        {
+          "year": 2,
+          "assets": {
+            "fixed_assets_net": 21000.0,
+            "receivables": 35506.85,
+            "inventory": 0.0,
+            "cash": 527247.76,
+            "total": 583754.61
+          },
+          "liabilities": {
+            "equity": 500000,
+            "retained_earnings": 78546.94,
+            "long_term_debt": 0.0,
+            "payables": 5207.67,
+            "total": 583754.61
+          }
+        },
+        {
+          "year": 3,
+          "assets": {
+            "fixed_assets_net": 27000.0,
+            "receivables": 85216.44,
+            "inventory": 0.0,
+            "cash": 533568.69,
+            "total": 645785.13
+          },
+          "liabilities": {
+            "equity": 500000,
+            "retained_earnings": 133286.72,
+            "long_term_debt": 0.0,
+            "payables": 12498.41,
+            "total": 645785.13
+          }
+        }
+      ]
+    }
+  },
+  "breakeven": {
+    "units": 62.5,
+    "revenue": 100000.0,
+    "months_to_breakeven": 0.0,
+    "fixed_costs_annual": 78000,
+    "contribution_margin_per_unit": 1248
+  },
+  "unit_economics": {
+    "ltv": 44928,
+    "cac": 1200,
+    "ltv_cac_ratio": 37.4,
+    "payback_months": 1.0,
+    "gross_margin_per_unit": 1248
+  },
+  "sensitivity": {
+    "dimensions": [
+      "revenue_growth",
+      "gross_margin"
+    ],
+    "variations": [
+      -0.2,
+      -0.1,
+      0.0,
+      0.1,
+      0.2
+    ],
+    "metric": "ebitda_year_3",
+    "matrix": [
+      [
+        -66096.0,
+        -27216.0,
+        11664.0,
+        50544.0,
+        89424.0
+      ],
+      [
+        -73644.0,
+        -30324.0,
+        12996.0,
+        56316.0,
+        99636.0
+      ],
+      [
+        -81600.0,
+        -33600.0,
+        14400.0,
+        62400.0,
+        110400.0
+      ],
+      [
+        -89964.0,
+        -37044.0,
+        15876.0,
+        68796.0,
+        121716.0
+      ],
+      [
+        -98736.0,
+        -40656.0,
+        17424.0,
+        75504.0,
+        133584.0
+      ]
+    ],
+    "additional_saas_churn_sensitivity": null
+  },
+  "incentives": {
+    "patent_box": {
+      "active": true,
+      "eligible_spend": 42000,
+      "super_deduction": 46200.0,
+      "tax_saving": 12889.8
+    },
+    "credito_rs": {
+      "active": true,
+      "eligible_spend": 42000,
+      "rate": 0.2,
+      "annual_credit": 8400.0
+    },
+    "innovazione_40": {
+      "active": true,
+      "eligible_spend": 42000,
+      "rate": 0.15,
+      "annual_credit": 6300.0
+    },
+    "nuova_sabatini": {
+      "active": false,
+      "eligible_capex": 0.0,
+      "interest_subsidy": 0.0
+    }
+  }
+}
