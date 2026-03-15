@@ -17,8 +17,8 @@ def main():
     bm = data.get("businessModel", {})
 
     horizon = pp["timeHorizonYears"]
-    funding_type = pp["fundingType"]
-    funding_amount = pp["fundingAmountEUR"]
+    funding_type = pp.get("fundingType", "equity")
+    funding_amount = pp.get("fundingAmountEUR", 0.0)
 
     base_rev = fa["baseYearRevenue"]
     growth = fa["expectedAnnualGrowth"]
@@ -26,12 +26,12 @@ def main():
     rd_pct = fa["rdPctRevenue"]
     sm_pct = fa["smPctRevenue"]
     ga_pct = fa["gaPctRevenue"]
-    capex_yr = fa["capexPerYear"]
-    dep_years = fa["depreciationYears"]
-    days_recv = fa["daysReceivable"]
-    days_pay = fa["daysPayable"]
-    days_inv = fa["daysInventory"]
-    interest_rate = fa["interestRatePct"]
+    capex_yr = fa.get("capexPerYear", 0.0)
+    dep_years = fa.get("depreciationYears", 5)
+    days_recv = fa.get("daysReceivable", 0)
+    days_pay = fa.get("daysPayable", 0)
+    days_inv = fa.get("daysInventory", 0)
+    interest_rate = fa.get("interestRatePct", 0.0)
     use_patent = fa.get("usePatentBox", False)
     use_credits = fa.get("useTaxCredits", False)
     use_sabatini = fa.get("useNuovaSabatini", False)
@@ -96,7 +96,7 @@ def main():
             ebitda = R(gross_profit - total_opex)
 
             cum_capex += capex_yr
-            depreciation = R(cum_capex / dep_years)
+            depreciation = R(cum_capex / dep_years) if dep_years > 0 else 0.0
             cum_dep += depreciation
 
             ebit = R(ebitda - depreciation)

@@ -263,3 +263,30 @@ class TestSaaSChurnSensitivity:
     def test_non_saas_has_no_churn_sensitivity(self):
         output = run_model(str(FIXTURES / "valid_input_bank.json"))
         assert output["sensitivity"]["additional_saas_churn_sensitivity"] is None
+
+
+class TestEdgeCases:
+    """Edge cases: zero revenue, negative EBT, missing optional fields."""
+
+    def test_zero_revenue_does_not_crash(self):
+        output = run_model(str(FIXTURES / "edge_case_zero_revenue.json"))
+        assert output["scenarios"]["base"]["pl"][0]["revenue_total"] == 0
+        assert output["scenarios"]["base"]["pl"][0]["ebitda"] <= 0
+
+    def test_zero_revenue_no_taxes_owed(self):
+        output = run_model(str(FIXTURES / "edge_case_zero_revenue.json"))
+        for year in output["scenarios"]["base"]["pl"]:
+            assert year["ires"] == 0, "No IRES on negative/zero income"
+            assert year["irap"] == 0, "No IRAP on negative/zero income"
+
+    def test_missing_unit_economics_graceful(self):
+        """If unitEconomics not provided, breakeven should handle gracefully."""
+        output = run_model(str(FIXTURES / "edge_case_zero_revenue.json"))
+        assert "breakeven" in output
+
+    def test_negative_ebt_no_taxes(self):
+        output = run_model(str(FIXTURES / "valid_input_horizon.json"))
+        for year in output["scenarios"]["pessimistic"]["pl"]:
+            if year["ebt"] < 0:
+                assert year["ires"] == 0
+                assert year["irap"] == 0
