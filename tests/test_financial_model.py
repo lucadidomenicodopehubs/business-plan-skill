@@ -219,3 +219,47 @@ class TestSchemaVersion:
     def test_output_has_generated_at(self, output):
         assert "generated_at" in output
         assert len(output["generated_at"]) > 0
+
+
+class TestSectorDefaults:
+    """Verify sector-specific defaults from spec section 7.7."""
+
+    def test_manufacturing_has_lower_gross_margin_than_saas(self):
+        saas = run_model(str(FIXTURES / "valid_input_saas.json"))
+        bank = run_model(str(FIXTURES / "valid_input_bank.json"))
+        saas_gm = saas["scenarios"]["base"]["pl"][0]["gross_margin_pct"]
+        bank_gm = bank["scenarios"]["base"]["pl"][0]["gross_margin_pct"]
+        assert saas_gm > bank_gm, f"SaaS GM {saas_gm}% should be > Manufacturing GM {bank_gm}%"
+
+    def test_bank_input_has_5_year_horizon(self):
+        output = run_model(str(FIXTURES / "valid_input_bank.json"))
+        assert output["time_horizon_years"] == 5
+        for scenario in output["scenarios"].values():
+            assert len(scenario["pl"]) == 5
+
+    def test_bank_input_has_interest_expense(self):
+        output = run_model(str(FIXTURES / "valid_input_bank.json"))
+        year1 = output["scenarios"]["base"]["pl"][0]
+        assert year1["interest_expense"] > 0, "Bank loan should have interest expense"
+
+    def test_deeptech_horizon_input_works(self):
+        output = run_model(str(FIXTURES / "valid_input_horizon.json"))
+        assert output["scenarios"]["base"]["pl"][0]["revenue_total"] == 666000
+
+    def test_nuova_sabatini_calculated_for_bank(self):
+        output = run_model(str(FIXTURES / "valid_input_bank.json"))
+        inc = output["incentives"]
+        assert inc["nuova_sabatini"]["active"] is True
+        assert inc["nuova_sabatini"]["interest_subsidy"] > 0
+
+
+class TestSaaSChurnSensitivity:
+    """Verify SaaS-specific churn sensitivity from spec section 7.5."""
+
+    def test_saas_has_churn_sensitivity(self):
+        output = run_model(str(FIXTURES / "valid_input_saas.json"))
+        assert output["sensitivity"]["additional_saas_churn_sensitivity"] is not None
+
+    def test_non_saas_has_no_churn_sensitivity(self):
+        output = run_model(str(FIXTURES / "valid_input_bank.json"))
+        assert output["sensitivity"]["additional_saas_churn_sensitivity"] is None

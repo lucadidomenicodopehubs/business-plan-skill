@@ -376,12 +376,35 @@ def _calc_sensitivity(base_rev, growth, gm, rd_pct, sm_pct, ga_pct,
 
     is_saas = "saas" in sector.lower() if sector else False
 
+    # SaaS churn sensitivity: compute last-year EBITDA at 5 churn rates [1%..5%]
+    # Each churn rate reduces effective revenue by (1 - churn_annual) each year
+    if is_saas:
+        churn_rates = [0.01, 0.02, 0.03, 0.04, 0.05]
+        churn_ebitda = []
+        for monthly_churn in churn_rates:
+            annual_retention = (1 - monthly_churn) ** 12
+            rev = base_rev
+            for yr in range(1, horizon + 1):
+                if yr > 1:
+                    rev = rev * (1 + growth) * annual_retention
+                cogs = rev * (1 - gm)
+                gp = rev - cogs
+                opex = rev * (rd_pct + sm_pct + ga_pct)
+                ebitda = gp - opex
+            churn_ebitda.append(R(ebitda))
+        saas_churn_sensitivity = {
+            "churn_rates": churn_rates,
+            "ebitda_year_last": churn_ebitda,
+        }
+    else:
+        saas_churn_sensitivity = None
+
     return {
         "dimensions": ["revenue_growth", "gross_margin"],
         "variations": variations,
         "metric": f"ebitda_year_{horizon}",
         "matrix": matrix,
-        "additional_saas_churn_sensitivity": None,  # placeholder for SaaS
+        "additional_saas_churn_sensitivity": saas_churn_sensitivity,
     }
 
 
