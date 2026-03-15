@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BusinessPlanInput",
+  "type": "object",
+  "required": ["schema_version", "company", "planProfile", "businessModel", "market", "team"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "company": {
+      "type": "object",
+      "required": ["name", "country", "legalForm"],
+      "properties": {
+        "name": {"type": "string"},
+        "country": {"type": "string", "default": "IT"},
+        "city": {"type": "string"},
+        "legalForm": {"type": "string", "enum": ["SRL","SRLS","SPA","Cooperativa","Altro"]},
+        "isInnovativeStartup": {"type": "boolean", "default": false},
+        "foundedYear": {"type": "integer"},
+        "website": {"type": "string"}
+      }
+    },
+    "planProfile": {
+      "type": "object",
+      "required": ["purpose", "fundingType"],
+      "properties": {
+        "purpose": {"type": "string", "enum": ["seed","seriesA","seriesB","bank_loan","public_grant"]},
+        "fundingType": {"type": "string", "enum": ["equity","debt","grant","mixed"]},
+        "targetProgram": {
+          "type": "string",
+          "enum": ["generic","smartstart","esa_bic","horizon_europe","cdp_vc","bank_it"],
+          "default": "generic"
+        },
+        "fundingAmountEUR": {"type": "number"},
+        "timeHorizonYears": {"type": "integer", "minimum": 3, "maximum": 5, "default": 3}
+      }
+    },
+    "businessModel": {
+      "type": "object",
+      "required": ["sector", "revenueModel"],
+      "properties": {
+        "sector": {
+          "type": "string",
+          "enum": ["SaaS_B2B","SaaS_B2C","Marketplace","Manufacturing","Services","Deeptech","Social_Impact","Other"]
+        },
+        "revenueModel": {"type": "string"},
+        "keyValueProposition": {"type": "string"},
+        "revenueLines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "type"],
+            "properties": {
+              "name": {"type": "string"},
+              "type": {"type": "string", "enum": ["subscription","usage","license","transaction_fee","one_time","grant"]},
+              "annualRevenueEUR": {"type": "number"},
+              "growthRatePct": {"type": "number"}
+            }
+          }
+        }
+      }
+    },
+    "market": {
+      "type": "object",
+      "properties": {
+        "targetSegments": {"type": "array", "items": {"type": "string"}},
+        "geographies": {"type": "array", "items": {"type": "string"}},
+        "tamEstimate": {"type": "number"},
+        "samEstimate": {"type": "number"},
+        "somEstimate": {"type": "number"},
+        "tamMethodology": {"type": "string", "enum": ["top_down","bottom_up","both"]}
+      }
+    },
+    "team": {
+      "type": "object",
+      "properties": {
+        "founders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "role"],
+            "properties": {
+              "name": {"type": "string"},
+              "role": {"type": "string"},
+              "background": {"type": "string"},
+              "linkedIn": {"type": "string"}
+            }
+          }
+        },
+        "teamSize": {"type": "integer"},
+        "advisors": {"type": "array", "items": {"type": "string"}},
+        "hasPhDOrResearchers": {"type": "boolean"}
+      }
+    },
+    "traction": {
+      "type": "object",
+      "properties": {
+        "customers": {"type": "integer"},
+        "arr": {"type": "number"},
+        "mrr": {"type": "number"},
+        "mrrGrowthPct": {"type": "number"},
+        "churnRateMonthly": {"type": "number"},
+        "keyMetrics": {"type": "array", "items": {"type": "string"}},
+        "milestones": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "financialAssumptions": {
+      "type": "object",
+      "properties": {
+        "baseYearRevenue": {"type": "number"},
+        "expectedAnnualGrowth": {"type": "number"},
+        "grossMarginPct": {"type": "number"},
+        "rdPctRevenue": {"type": "number"},
+        "smPctRevenue": {"type": "number"},
+        "gaPctRevenue": {"type": "number"},
+        "capexPerYear": {"type": "number"},
+        "depreciationYears": {"type": "integer", "default": 5},
+        "daysReceivable": {"type": "integer", "default": 60},
+        "daysPayable": {"type": "integer", "default": 45},
+        "daysInventory": {"type": "integer", "default": 30},
+        "interestRatePct": {"type": "number", "default": 0.05},
+        "usePatentBox": {"type": "boolean", "default": false},
+        "useTaxCredits": {"type": "boolean", "default": false},
+        "useNuovaSabatini": {"type": "boolean", "default": false},
+        "rdSpendingEUR": {"type": "number"},
+        "scenarioMultipliers": {
+          "type": "object",
+          "properties": {
+            "pessimistic": {"type": "object", "properties": {
+              "revenueGrowthFactor": {"type": "number", "default": 0.6},
+              "costFactor": {"type": "number", "default": 1.1}
+            }},
+            "optimistic": {"type": "object", "properties": {
+              "revenueGrowthFactor": {"type": "number", "default": 1.4},
+              "costFactor": {"type": "number", "default": 0.95}
+            }}
+          }
+        }
+      }
+    },
+    "unitEconomics": {
+      "type": "object",
+      "properties": {
+        "unitPrice": {"type": "number"},
+        "unitVariableCost": {"type": "number"},
+        "fixedCostsAnnual": {"type": "number"},
+        "cac": {"type": "number"},
+        "avgCustomerLifetimeMonths": {"type": "number"}
+      }
+    },
+    "researchConfig": {
+      "type": "object",
+      "properties": {
+        "enabledSources": {
+          "type": "array",
+          "items": {"type": "string", "enum": ["web_search","istat_eurostat","mimit_registry","crunchbase","custom_urls"]},
+          "default": ["web_search", "istat_eurostat", "mimit_registry"]
+        },
+        "customUrls": {"type": "array", "items": {"type": "string"}},
+        "skipResearch": {"type": "boolean", "default": false}
+      }
+    },
+    "interviewState": {
+      "type": "object",
+      "properties": {
+        "completedBlocks": {"type": "array", "items": {"type": "integer"}},
+        "lastBlockCompleted": {"type": "integer"},
+        "isComplete": {"type": "boolean", "default": false}
+      }
+    }
+  }
+}

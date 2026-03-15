@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "company": {
+    "name": "DataFlow AI",
+    "country": "IT",
+    "city": "Milano",
+    "legalForm": "SRL",
+    "isInnovativeStartup": true,
+    "foundedYear": 2024,
+    "website": "https://dataflow.ai"
+  },
+  "planProfile": {
+    "purpose": "seed",
+    "fundingType": "equity",
+    "targetProgram": "cdp_vc",
+    "fundingAmountEUR": 500000,
+    "timeHorizonYears": 3
+  },
+  "businessModel": {
+    "sector": "SaaS_B2B",
+    "revenueModel": "subscription",
+    "keyValueProposition": "AI-powered document automation for Italian SMEs",
+    "revenueLines": [
+      {"name": "SaaS Subscriptions", "type": "subscription", "annualRevenueEUR": 96000, "growthRatePct": 1.0},
+      {"name": "Professional Services", "type": "one_time", "annualRevenueEUR": 24000, "growthRatePct": 0.3}
+    ]
+  },
+  "market": {
+    "targetSegments": ["SMEs 10-250 employees", "Professional services firms"],
+    "geographies": ["Italy", "DACH region"],
+    "tamEstimate": 5000000000,
+    "samEstimate": 500000000,
+    "somEstimate": 10000000,
+    "tamMethodology": "both"
+  },
+  "team": {
+    "founders": [
+      {"name": "Marco Rossi", "role": "CEO", "background": "10y enterprise sales at SAP"},
+      {"name": "Laura Bianchi", "role": "CTO", "background": "PhD ML, ex-Google Research"}
+    ],
+    "teamSize": 8,
+    "advisors": ["Prof. Giovanni Verdi (PoliMi AI Lab)"],
+    "hasPhDOrResearchers": true
+  },
+  "traction": {
+    "customers": 5,
+    "arr": 0,
+    "mrr": 8000,
+    "mrrGrowthPct": 0.15,
+    "churnRateMonthly": 0.03,
+    "keyMetrics": ["NPS 72", "Avg contract value EUR 1600/mo"],
+    "milestones": ["Beta launch Jan 2025", "First paying customer Mar 2025"]
+  },
+  "financialAssumptions": {
+    "baseYearRevenue": 120000,
+    "expectedAnnualGrowth": 1.0,
+    "grossMarginPct": 0.78,
+    "rdPctRevenue": 0.35,
+    "smPctRevenue": 0.30,
+    "gaPctRevenue": 0.10,
+    "capexPerYear": 15000,
+    "depreciationYears": 5,
+    "daysReceivable": 45,
+    "daysPayable": 30,
+    "daysInventory": 0,
+    "interestRatePct": 0.0,
+    "usePatentBox": true,
+    "useTaxCredits": true,
+    "useNuovaSabatini": false,
+    "rdSpendingEUR": 42000
+  },
+  "unitEconomics": {
+    "unitPrice": 1600,
+    "unitVariableCost": 352,
+    "fixedCostsAnnual": 78000,
+    "cac": 1200,
+    "avgCustomerLifetimeMonths": 36
+  },
+  "researchConfig": {
+    "enabledSources": ["web_search", "istat_eurostat", "mimit_registry"],
+    "customUrls": [],
+    "skipResearch": false
+  },
+  "interviewState": {
+    "completedBlocks": [1, 2, 3, 4, 5, 6, 7, 8],
+    "lastBlockCompleted": 8,
+    "isComplete": true
+  }
+}

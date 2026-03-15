@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "company": {"name": "PreRevenue Co", "country": "IT", "legalForm": "SRLS"},
+  "planProfile": {"purpose": "seed", "fundingType": "equity", "timeHorizonYears": 3},
+  "businessModel": {"sector": "SaaS_B2B", "revenueModel": "subscription", "keyValueProposition": "Pre-revenue startup"},
+  "market": {"targetSegments": ["Enterprise"], "geographies": ["Italy"]},
+  "team": {"founders": [{"name": "Test", "role": "CEO", "background": "10y experience"}], "teamSize": 2},
+  "financialAssumptions": {
+    "baseYearRevenue": 0,
+    "expectedAnnualGrowth": 0,
+    "grossMarginPct": 0.70,
+    "rdPctRevenue": 0,
+    "smPctRevenue": 0,
+    "gaPctRevenue": 0,
+    "capexPerYear": 0
+  }
+}

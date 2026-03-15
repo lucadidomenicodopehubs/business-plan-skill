@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.business-plan/
+*.pdf
+*.docx
+.pytest_cache/
+.mypy_cache/

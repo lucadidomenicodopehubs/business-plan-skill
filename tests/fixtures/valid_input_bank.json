@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "company": {
+    "name": "Meccanica Precision SRL",
+    "country": "IT",
+    "city": "Brescia",
+    "legalForm": "SRL",
+    "isInnovativeStartup": false,
+    "foundedYear": 2015,
+    "website": "https://meccanicaprecision.it"
+  },
+  "planProfile": {
+    "purpose": "bank_loan",
+    "fundingType": "debt",
+    "targetProgram": "bank_it",
+    "fundingAmountEUR": 800000,
+    "timeHorizonYears": 5
+  },
+  "businessModel": {
+    "sector": "Manufacturing",
+    "revenueModel": "product_sales",
+    "keyValueProposition": "Precision CNC components for automotive and aerospace",
+    "revenueLines": [
+      {"name": "Automotive components", "type": "one_time", "annualRevenueEUR": 7000000, "growthRatePct": 0.15},
+      {"name": "Aerospace components", "type": "one_time", "annualRevenueEUR": 3000000, "growthRatePct": 0.25}
+    ]
+  },
+  "market": {
+    "targetSegments": ["Tier 1 automotive suppliers", "Aerospace MRO"],
+    "geographies": ["Italy", "Germany", "France"],
+    "tamEstimate": 2000000000,
+    "samEstimate": 200000000,
+    "somEstimate": 15000000,
+    "tamMethodology": "both"
+  },
+  "team": {
+    "founders": [
+      {"name": "Giuseppe Ferri", "role": "CEO", "background": "25y manufacturing, ex-plant manager Brembo"},
+      {"name": "Anna Colombo", "role": "CFO", "background": "15y corporate finance, CPA"}
+    ],
+    "teamSize": 45,
+    "advisors": [],
+    "hasPhDOrResearchers": false
+  },
+  "traction": {
+    "customers": 28,
+    "arr": 0, "mrr": 0, "mrrGrowthPct": 0, "churnRateMonthly": 0,
+    "keyMetrics": ["OEE 87%", "Scrap rate 1.2%", "On-time delivery 96%"],
+    "milestones": ["ISO 9001 certified 2016", "AS9100 aerospace certified 2022"]
+  },
+  "financialAssumptions": {
+    "baseYearRevenue": 10000000,
+    "expectedAnnualGrowth": 0.18,
+    "grossMarginPct": 0.38,
+    "rdPctRevenue": 0.05,
+    "smPctRevenue": 0.12,
+    "gaPctRevenue": 0.08,
+    "capexPerYear": 400000,
+    "depreciationYears": 7,
+    "daysReceivable": 90,
+    "daysPayable": 60,
+    "daysInventory": 45,
+    "interestRatePct": 0.045,
+    "usePatentBox": false,
+    "useTaxCredits": true,
+    "useNuovaSabatini": true,
+    "rdSpendingEUR": 500000
+  },
+  "unitEconomics": {
+    "unitPrice": 250,
+    "unitVariableCost": 155,
+    "fixedCostsAnnual": 3800000,
+    "cac": 0,
+    "avgCustomerLifetimeMonths": 0
+  },
+  "researchConfig": {
+    "enabledSources": ["web_search", "istat_eurostat"],
+    "customUrls": [],
+    "skipResearch": false
+  },
+  "interviewState": {
+    "completedBlocks": [1,2,3,4,5,6,7,8],
+    "lastBlockCompleted": 8,
+    "isComplete": true
+  }
+}

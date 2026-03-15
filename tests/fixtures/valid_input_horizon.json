@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "company": {
+    "name": "QuantumSense Consortium",
+    "country": "IT",
+    "city": "Roma",
+    "legalForm": "SRL",
+    "isInnovativeStartup": true,
+    "foundedYear": 2023
+  },
+  "planProfile": {
+    "purpose": "public_grant",
+    "fundingType": "grant",
+    "targetProgram": "horizon_europe",
+    "fundingAmountEUR": 2000000,
+    "timeHorizonYears": 3
+  },
+  "businessModel": {
+    "sector": "Deeptech",
+    "revenueModel": "license",
+    "keyValueProposition": "Quantum-enhanced satellite data processing for climate monitoring",
+    "revenueLines": [
+      {"name": "Grant funding", "type": "grant", "annualRevenueEUR": 666000, "growthRatePct": 0},
+      {"name": "License post-grant", "type": "license", "annualRevenueEUR": 0, "growthRatePct": 0}
+    ]
+  },
+  "market": {
+    "targetSegments": ["National weather services", "ESA downstream applications"],
+    "geographies": ["EU", "Global"],
+    "tamEstimate": 800000000,
+    "samEstimate": 50000000,
+    "somEstimate": 2000000,
+    "tamMethodology": "top_down"
+  },
+  "team": {
+    "founders": [
+      {"name": "Dr. Elena Marini", "role": "PI", "background": "PhD Quantum Computing, CNR researcher"},
+      {"name": "Dr. Fabio Conti", "role": "Co-PI", "background": "PhD Satellite Remote Sensing, ASI"}
+    ],
+    "teamSize": 12,
+    "advisors": ["Prof. Klaus Weber (TU Munich)"],
+    "hasPhDOrResearchers": true
+  },
+  "traction": {
+    "customers": 0, "arr": 0, "mrr": 0, "mrrGrowthPct": 0, "churnRateMonthly": 0,
+    "keyMetrics": ["TRL 3", "2 patents filed", "3 publications"],
+    "milestones": ["EIC Pathfinder Open grant 2024", "Proof of concept Q3 2025"]
+  },
+  "financialAssumptions": {
+    "baseYearRevenue": 666000,
+    "expectedAnnualGrowth": 0.0,
+    "grossMarginPct": 0.70,
+    "rdPctRevenue": 0.75,
+    "smPctRevenue": 0.05,
+    "gaPctRevenue": 0.10,
+    "capexPerYear": 100000,
+    "depreciationYears": 5,
+    "daysReceivable": 30,
+    "daysPayable": 30,
+    "daysInventory": 0,
+    "interestRatePct": 0.0,
+    "usePatentBox": true,
+    "useTaxCredits": true,
+    "useNuovaSabatini": false,
+    "rdSpendingEUR": 500000
+  },
+  "researchConfig": {
+    "enabledSources": ["web_search"],
+    "customUrls": [],
+    "skipResearch": false
+  },
+  "interviewState": {
+    "completedBlocks": [1,2,3,4,5,6,7,8],
+    "lastBlockCompleted": 8,
+    "isComplete": true
+  }
+}
