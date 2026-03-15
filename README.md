@@ -12,8 +12,8 @@ Skill per Claude Code che genera business plan professionali per startup, PMI e 
 
 ```bash
 # Clona il repository
-git clone https://github.com/lucadidomenicodopehubs/business-plan-skill-v2
-cd business-plan-skill-v2
+git clone https://github.com/lucadidomenicodopehubs/business-plan-skill
+cd business-plan-skill
 
 # Copia nella directory skill di Claude Code
 mkdir -p ~/.claude/skills
